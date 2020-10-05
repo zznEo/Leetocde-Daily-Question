@@ -53,8 +53,9 @@ public:
 		return rever;
 	}
 	void ReverList(ListNode* head) {
+		/*
 		int i = 0;
-		/*while (head) {
+		while (head) {
 			cout <<"i = " << i << " val =  " << head->val << endl;
 			i++;
 			head = head->next;
