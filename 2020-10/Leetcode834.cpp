@@ -1,3 +1,16 @@
+/*
+dp[u] 代表以 u 为根节点，到达所有点的距离和
+sz[u] 代表以 v 为根节点，所有节点的个数
+
+当产生换根操作时，根由 u --> v
+先把 v 的那条节点包括的所有东西都去掉
+dp[u] = dp[u] - dp[v] - sz[v];
+sz[u] = sz[u] - sz[v];
+
+//把 u 当作 v 的一个子树进行相加
+dp[v] = dp[v] + dp[u] + sz[u];
+sz[v] = sz[v] + sz[u];
+*/
 #include <bits/stdc++.h>
 using namespace std;
 class Solution {
